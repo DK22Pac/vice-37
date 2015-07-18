@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RwFunctionsList.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="RwFunctionsHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AdapterRefreshRate.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="RwEngineInstanceHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBufferHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoadHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="RwEngineVideoMode.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="MatFXHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="HAnimHook.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="rwsdk\d3d9\lib\release\rpadc.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpanisot.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpcollis.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpdmorph.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpenv.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rphanim.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rplodatm.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rplogo.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpltmap.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpmipkl.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpmorph.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpnormmap.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpnormmapskin.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rppatch.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rppatchmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rppatchskin.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rppatchskinmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpprtstd.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpptank.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rppvs.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rprandom.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpskin.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpskinmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpspline.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpusrdat.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpuvanim.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rpworld.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rt2d.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rt2danim.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtanim.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtbary.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtbezpat.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtbmp.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtcharse.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtcmpkey.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtdict.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtfsyst.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtgcond.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtgncpip.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtimport.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtintsec.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtltmap.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtltmapcnv.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtmipk.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtmipkmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtmipkpatch.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtmipkpatchmatfx.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtnormmap.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtpick.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtpitexd.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtpng.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtpngcw.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtquat.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtras.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtray.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtskinsp.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtslerp.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtsplpvs.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rttiff.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rttilerd.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rttoc.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtvcat.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtwing.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rtworld.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rwcore.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
