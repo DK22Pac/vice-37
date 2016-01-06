@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\Modules">
+      <UniqueIdentifier>{4087bc53-2bd7-4a87-92ab-263953ff1247}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp">
@@ -56,6 +59,12 @@
     <ClInclude Include="HAnimHook.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="GameTest.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalMap.h">
+      <Filter>Заголовочные файлы\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="rwsdk\d3d9\lib\release\rpadc.lib">
@@ -77,9 +86,6 @@
       <Filter>Файлы ресурсов</Filter>
     </Library>
     <Library Include="rwsdk\d3d9\lib\release\rplodatm.lib">
-      <Filter>Файлы ресурсов</Filter>
-    </Library>
-    <Library Include="rwsdk\d3d9\lib\release\rplogo.lib">
       <Filter>Файлы ресурсов</Filter>
     </Library>
     <Library Include="rwsdk\d3d9\lib\release\rpltmap.lib">
@@ -254,6 +260,9 @@
       <Filter>Файлы ресурсов</Filter>
     </Library>
     <Library Include="rwsdk\d3d9\lib\release\rwcore.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+    <Library Include="rwsdk\d3d9\lib\release\rplogo.lib">
       <Filter>Файлы ресурсов</Filter>
     </Library>
   </ItemGroup>

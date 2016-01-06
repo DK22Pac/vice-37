@@ -7,6 +7,7 @@
 #include "RwEngineVideoMode.h"
 #include "MatFXHook.h"
 #include "HAnimHook.h"
+#include "GameTest.h"
 
 RwBool MyRwEngineInit(const RwMemoryFunctions *memFuncs, RwUInt32 initFlags, RwUInt32 resArenaSize)
 {
@@ -35,6 +36,7 @@ BOOL APIENTRY DllMain(HMODULE module, DWORD reason, LPVOID reserved)
 		MakeMatFxHook();
 		MakeHAnimHook();
 		MakeTextureLoadHook();
+        OnDllAttached();
 	}
     return TRUE;
 }

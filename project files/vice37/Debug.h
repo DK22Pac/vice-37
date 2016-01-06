@@ -15,6 +15,7 @@ bool DebugMsg(char *message, ...)
 
 bool DebugLine(char *line, ...)
 {
+#ifndef _DISABLE_DEBUG_
 	char text[1024];
 	va_list ap;
 	va_start(ap, line);
@@ -24,5 +25,6 @@ bool DebugLine(char *line, ...)
 	fputs(text, f);
 	fputs("\n", f);
 	fclose(f);
+#endif
 	return false;
 }

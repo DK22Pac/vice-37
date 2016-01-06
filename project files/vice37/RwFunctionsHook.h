@@ -196,7 +196,7 @@ void MakeRwFunctionsHook()
 	CPatch::RedirectJump(0x642B40, RwEngineGetNumVideoModes                                    );
 //	CPatch::RedirectJump(0x642B70, RwEngineGetVideoModeInfo                                    ); // replaced with RwEngineVideoMode
 	CPatch::RedirectJump(0x642BA0, RwEngineGetCurrentVideoMode                                 );
-	CPatch::RedirectJump(0x642BD0, RwEngineSetVideoMode                                        );
+//	CPatch::RedirectJump(0x642BD0, RwEngineSetVideoMode                                        ); // moved to RwEngineVideoMode
 	CPatch::RedirectJump(0x642C00, RwEngineStop                                                );
 	CPatch::RedirectJump(0x642C50, RwEngineStart                                               );
 	CPatch::RedirectJump(0x642CE0, RwEngineClose                                               );
@@ -393,7 +393,7 @@ void MakeRwFunctionsHook()
 	CPatch::RedirectJump(0x64DA20, RtAnimAnimationDestroy                                      );
 	CPatch::RedirectJump(0x64DA60, RtAnimInterpolatorCreate                                    );
 	CPatch::RedirectJump(0x64DAC0, RtAnimInterpolatorDestroy                                   );
-	CPatch::RedirectJump(0x64DAD0, RtAnimInterpolatorSetCurrentAnim                            );
+//	CPatch::RedirectJump(0x64DAD0, RtAnimInterpolatorSetCurrentAnim                            ); // moved to hanim hook
 //	CPatch::RedirectJump(0x64DB70, memmove                                                     );
 //	CPatch::RedirectJump(0x64DBF0, memcpy                                                      );
 //	CPatch::RedirectJump(0x64DC30, memset                                                      );

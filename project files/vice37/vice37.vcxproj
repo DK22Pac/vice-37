@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{92B6428C-F8E2-4277-B7F0-C45323BD6A89}</ProjectGuid>
     <RootNamespace>vice37</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -45,7 +46,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>D:\Games\GTA Vice City\vice37\vice37\rwsdk\d3d9\include;$(IncludePath)</IncludePath>
     <TargetExt>.asi</TargetExt>
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir>D:\Games\GTA Vice City\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -77,10 +78,12 @@
     <ClInclude Include="AdapterRefreshRate.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="GameTest.h" />
     <ClInclude Include="HAnimHook.h" />
     <ClInclude Include="MatFXHook.h" />
     <ClInclude Include="IndexBufferHook.h" />
     <ClInclude Include="MemoryManagement.h" />
+    <ClInclude Include="NormalMap.h" />
     <ClInclude Include="RwEngineInstanceHook.h" />
     <ClInclude Include="RwEngineVideoMode.h" />
     <ClInclude Include="RwFunctionsList.h" />
