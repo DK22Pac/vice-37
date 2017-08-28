@@ -1,9 +1,8 @@
 #pragma once
 
-#include <rwcore.h>
-#include <rpworld.h>
-#include <rphanim.h>
-#include <rpmatfx.h>
-#include <rtbmp.h>
-#include <rpskin.h>
-#include <rpanisot.h>
+#include <src/rwcore.h>
+#include <extplugin/rphanim.h>
+#include <extplugin/rpmatfx.h>
+#include <extplugin/rtbmp.h>
+#include <extplugin/rpskin.h>
+#include <extplugin/rpanisot.h>

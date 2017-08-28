@@ -10,6 +10,7 @@ extern "C" void _rwD3D9CheckValidCameraTextureFormat();
 #ifdef RwIm2DGetNearScreenZ
 #undef RwIm2DGetNearScreenZ
 #endif
+
 RwReal RwIm2DGetNearScreenZ(void)
 {
 	return (RWSRCGLOBAL(dOpenDevice).zBufferNear);

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <rwcore.h>
+#include <src/rwcore.h>
 #include <Windows.h>
 #include "CPatch.h"
 

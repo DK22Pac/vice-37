@@ -7,13 +7,16 @@
 #include "RwEngineVideoMode.h"
 #include "MatFXHook.h"
 #include "HAnimHook.h"
-#include "GameTest.h"
 
 RwBool MyRwEngineInit(const RwMemoryFunctions *memFuncs, RwUInt32 initFlags, RwUInt32 resArenaSize)
 {
+    MessageBox( NULL, "top kek", "meow", MB_OK );
+
 	RwBool result = RwEngineInit(memFuncs, initFlags, resArenaSize);
+#if 0
 	if(RtFSManagerOpen(RTFSMAN_UNLIMITED_NUM_FS) != FALSE)
 		psInstallFileSystem();
+#endif
 	return result;
 };
 
@@ -36,7 +39,6 @@ BOOL APIENTRY DllMain(HMODULE module, DWORD reason, LPVOID reserved)
 		MakeMatFxHook();
 		MakeHAnimHook();
 		MakeTextureLoadHook();
-        OnDllAttached();
 	}
     return TRUE;
 }

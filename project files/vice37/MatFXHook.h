@@ -1,7 +1,7 @@
 #pragma once
 #include "CPatch.h"
-#include <rwcore.h>
-#include <rpmatfx.h>
+#include <src/rwcore.h>
+//#include <rpmatfx.h>
 
 unsigned int &MyMatFXMaterialDataOffset = *(unsigned int *)0x7876CC;
 

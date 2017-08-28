@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,19 +13,19 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{92B6428C-F8E2-4277-B7F0-C45323BD6A89}</ProjectGuid>
     <RootNamespace>vice37</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -40,21 +40,25 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Games\GTA Vice City\vice37\vice37\rwsdk\d3d9\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)rwsdk\d3d9\include;$(IncludePath)</IncludePath>
     <TargetExt>.asi</TargetExt>
+    <LibraryPath>$(ProjectDir)rwsdk\d3d9\lib\$(Platform)\$(Configuration)\;$(ProjectDir)\rwsdk\d3d9\extplugin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\Games\GTA Vice City\vice37\vice37\rwsdk\d3d9\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)rwsdk\d3d9\include;$(IncludePath)</IncludePath>
     <TargetExt>.asi</TargetExt>
     <OutDir>D:\Games\GTA Vice City\</OutDir>
+    <LibraryPath>$(ProjectDir)rwsdk\d3d9\lib\$(Platform)\$(Configuration)\;$(ProjectDir)\rwsdk\d3d9\extplugin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level1</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rw37.lib;rtquat.lib;rpanisot.lib;rtanim.lib;rphanim.lib;rpskin.lib;rpmatfx.lib;rtbmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -63,12 +67,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>rw37.lib;rtquat.lib;rpanisot.lib;rtanim.lib;rphanim.lib;rpskin.lib;rpmatfx.lib;rtbmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -78,7 +84,6 @@
     <ClInclude Include="AdapterRefreshRate.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="FileSystem.h" />
-    <ClInclude Include="GameTest.h" />
     <ClInclude Include="HAnimHook.h" />
     <ClInclude Include="MatFXHook.h" />
     <ClInclude Include="IndexBufferHook.h" />
@@ -89,74 +94,6 @@
     <ClInclude Include="RwFunctionsList.h" />
     <ClInclude Include="RwFunctionsHook.h" />
     <ClInclude Include="TextureLoadHook.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="rwsdk\d3d9\lib\release\rpadc.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpanisot.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpcollis.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpdmorph.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpenv.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rphanim.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rplodatm.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rplogo.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpltmap.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpmipkl.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpmorph.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpnormmap.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpnormmapskin.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rppatch.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rppatchmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rppatchskin.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rppatchskinmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpprtstd.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpptank.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rppvs.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rprandom.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpskin.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpskinmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpspline.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpusrdat.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpuvanim.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rpworld.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rt2d.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rt2danim.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtanim.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtbary.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtbezpat.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtbmp.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtcharse.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtcmpkey.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtdict.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtfsyst.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtgcond.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtgncpip.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtimport.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtintsec.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtltmap.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtltmapcnv.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtmipk.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtmipkmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtmipkpatch.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtmipkpatchmatfx.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtnormmap.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtpick.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtpitexd.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtpng.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtpngcw.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtquat.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtras.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtray.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtskinsp.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtslerp.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtsplpvs.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rttiff.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rttilerd.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rttoc.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtvcat.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtwing.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rtworld.lib" />
-    <Library Include="rwsdk\d3d9\lib\release\rwcore.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

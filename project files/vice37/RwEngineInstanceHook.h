@@ -4,7 +4,7 @@
 #define OFFSET_VECSPRINTF 0xC4  // 0xF0 - 0x2C
 #define OFFSET_VECSTRLEN 0xF4   // 0x11C - 0x2C + 4
 
-#include <rwcore.h>
+#include <src/rwcore.h>
 
 void MakeRwEngineInstanceHooks()
 {
