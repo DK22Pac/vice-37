@@ -12,3 +12,7 @@ Current features:
 1. Enabled antialiasing
 
 2. Mipmapping is now working without additional plugins
+
+# Requirements
+
+* Ultimate ASI Loader (https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases)
