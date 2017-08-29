@@ -1,9 +1,9 @@
 #pragma once
 #include "CPatch.h"
-#include <rwcore.h>
-#include <rphanim.h>
-#include <rtanim.h>
-#include <rplogo.h>
+#include <src/rwcore.h>
+//#include <rphanim.h>
+//#include <rtanim.h>
+//#include <rplogo.h>
 #include "Debug.h"
 
 RtAnimAnimation *GtaCreateAnimAnimation(RpHAnimHierarchy *hier)
@@ -44,7 +44,7 @@ RtAnimAnimation *GtaCreateAnimAnimation(RpHAnimHierarchy *hier)
 }
 
 RwBool MyRpHAnimPluginAttach(){
-    RpLogoPluginAttach();
+    //RpLogoPluginAttach(); already internal to RW (bacamval.c)
     return RpHAnimPluginAttach();
 }
 

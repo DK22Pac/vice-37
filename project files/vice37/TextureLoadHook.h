@@ -1,7 +1,7 @@
 #pragma once
 #include "CPatch.h"
 
-#include <rwcore.h>
+#include <src/rwcore.h>
 
 extern "C" RwBool _rwD3D9CheckValidTextureFormat(RwUInt32 format);
 

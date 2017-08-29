@@ -1,6 +1,6 @@
 #pragma once
 
-#include <rtfsyst.h>
+#include <src/rtfsyst.h>
 #include "CPatch.h"
 
 #define MAX_NB_FILES_PER_FS    20
@@ -46,6 +46,7 @@ void MakeFileFunctionsHook()
 
 RwBool psInstallFileSystem(void)
 {
+#if 0
 #ifdef RTFSYST_H
 	RwChar  curDirBuffer[_MAX_PATH];
 	RtFileSystem * wfs, *unc;
@@ -119,6 +120,7 @@ RwBool psInstallFileSystem(void)
 			}
 		}
 	}
-# endif
+#endif
+#endif
 	return true;
 }
