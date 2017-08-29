@@ -14,7 +14,5 @@ RwBool MyRpMatFXPluginAttach()
 
 void MakeMatFxHook()
 {
-    MessageBox( NULL, "the init", "the blowa", MB_OK );
-
 	CPatch::RedirectJump(0x655EB0, MyRpMatFXPluginAttach);
 }
