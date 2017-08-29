@@ -362,7 +362,7 @@ FreeListCreate(
     heapSize >>= 3;
 
     /* setup free list */
-#ifdef RWDEBUG
+#if defined(RWDEBUG) && defined(RWFREELISTDBG)
     freeList->nonAlignedEntrySize = entrySize;
 #endif /* RWDEBUG */
     freeList->entrySize           = alignedBlockSize;
@@ -408,7 +408,7 @@ FreeListCreate(
     RWRETURN(freeList);
 }
 
-#if (defined(RWDEBUG) && !defined(DOXYGEN))
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN))
 
 RwFreeList *
 _rwFreeListCreate(RwInt32 entrySize,
@@ -437,7 +437,7 @@ _rwFreeListCreate(RwInt32 entrySize,
     RWRETURN(freelist);
 }
 
-#else /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#else /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
 /**
  * \ingroup rwfreelist
  * \ref RwFreeListCreate is deprecated. \ref RwFreeListCreateAndPreallocateSpace
@@ -475,7 +475,7 @@ RwFreeListCreate(RwInt32 entrySize, RwInt32 entriesPerBlock,
     RWASSERT(!(alignment & (alignment - 1))); /* Assert power of 2 */
     RWRETURN(FreeListCreate(entrySize, entriesPerBlock, alignment, 1, NULL, hint));
 }
-#endif /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
 
 
 
@@ -909,22 +909,22 @@ _rwFreeListFreeReal(RwFreeList * freeList, void *entry)
             /* get a pointer to the heap */
             heap = (RwUInt8*)link + sizeof(RwLLLink);
 
-#ifdef RWDEBUG
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG))
             if ((heap[heapElement] & mask) == 0)
             {
                 RWMESSAGE((RWSTRING("entry 0x%X was not previously allocated"),
                     (RwUInt32)entry));
             }
             RWASSERT(heap[heapElement] & mask);
-#endif /* RWDEBUG */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG)) */
 
             /* set the heap element as freed */
             heap[heapElement] &= (RwUInt8)(~mask);
 
-#ifdef RWDEBUG
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG))
             /* stamp some entry for debug */
             memset(entry, FREEMASK, freeList->nonAlignedEntrySize);
-#endif /* RWDEBUG */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG)) */
 
 
             /* if we're allowed to free empty blocks */

@@ -47,7 +47,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(ProjectDir)rwsdk\d3d9\include;$(IncludePath)</IncludePath>
     <TargetExt>.asi</TargetExt>
-    <OutDir>D:\Games\GTA Vice City\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <LibraryPath>$(ProjectDir)rwsdk\d3d9\lib\$(Platform)\$(Configuration)\;$(ProjectDir)\rwsdk\d3d9\extplugin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

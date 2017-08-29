@@ -647,9 +647,9 @@ typedef struct RwFreeList RwFreeList;
 struct RwFreeList
 {
     RwUInt32   entrySize;       /**<Size of an entry in the free list. */
-#if (defined(RWDEBUG) && !defined(DOXYGEN))
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN))
     RwUInt32   nonAlignedEntrySize;
-#endif /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
     RwUInt32   entriesPerBlock; /**<Number of entries per free list block. */
     RwUInt32   heapSize;        /**<Size of the heap. */
     RwUInt32   alignment;       /**<Alignment of a free list entry. */
@@ -659,10 +659,10 @@ struct RwFreeList
                                     rwFREELISTFLAG_FREEBLOCKS */
     RwLLLink   link;            /**<Link to the free list linked list. */
 
-#if (defined(RWDEBUG) && !defined(DOXYGEN))
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN))
     const RwChar       *fileCreate;
     RwUInt32            lineCreate;
-#endif /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
 };
 #ifndef RWADOXYGENEXTERNAL
 /**
@@ -717,7 +717,7 @@ RWEXPORT RwMemoryFunctions* RWAPI RwOsGetMemoryInterface(void);
  *************/
 
 /* Allocation and freeing */
-#if (defined(RWDEBUG) && !defined(DOXYGEN))
+#if (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN))
 
 RWEXPORT RwFreeList* RWAPI _rwFreeListCreate(RwInt32 entrySize,
                                       RwInt32 entriesPerBlock,
@@ -734,7 +734,7 @@ RWEXPORT RwFreeList* RWAPI _rwFreeListCreate(RwInt32 entrySize,
                                       hint,                     \
                                       __FILE__,                 \
                                       __LINE__)
-#else /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#else /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
 
 /* legacy freelist create */
 
@@ -742,7 +742,7 @@ RWEXPORT RwFreeList* RWAPI RwFreeListCreate(RwInt32 entrySize,
                                      RwInt32 entriesPerBlock,
                                      RwInt32 alignment,
                                      RwUInt32 hint);
-#endif /* (defined(RWDEBUG) && !defined(DOXYGEN)) */
+#endif /* (defined(RWDEBUG) && defined(RWFREELISTDBG) && !defined(DOXYGEN)) */
 
 RWEXPORT RwFreeList* RWAPI
 RwFreeListCreateAndPreallocateSpace(RwInt32 entrySize,

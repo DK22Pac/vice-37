@@ -571,7 +571,7 @@ void MakeRwFunctionsHook()
 	CPatch::RedirectJump(0x6558F0, RpMaterialRegisterPluginStream                              );
 	CPatch::RedirectJump(0x655920, RpMaterialStreamRead                                        );
 //	CPatch::RedirectJump(0x655C40, _rpMatFXTextureMaskCreate                                   );
-	//CPatch::RedirectJump(0x655EB0, RpMatFXPluginAttach                                         ); // Moved to matfx hook
+//  CPatch::RedirectJump(0x655EB0, RpMatFXPluginAttach                                         ); // Moved to matfx hook
 //	CPatch::RedirectJump(0x655FC0, MatFXClose                                                  );
 //	CPatch::RedirectJump(0x656000, MatFXOpen                                                   );
 //	CPatch::RedirectJump(0x656050, MatFXMaterialConstructor                                    );

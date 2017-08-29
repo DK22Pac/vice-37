@@ -165,7 +165,7 @@
 /* Texture handling */
 #include "batextur.h"
 
-#if defined(RWEVALUATION)
+#if defined(_DEBUG) || defined(RWEVALUATION)
 #include "bacamval.h"
 #endif /* defined(RWEVALUATION) */
 
@@ -3343,7 +3343,7 @@ _rwTextureClose(void *instance,
     /* One less module instance */
     textureModule.numInstances--;
 
-#if (defined(RWEVALUATION))
+#if (defined(_DEBUG)) || (defined(RWEVALUATION))
     _rwCameraValClose();
 #endif /* defined(RWEVALUATION) */
 
@@ -3434,7 +3434,7 @@ _rwTextureOpen(void *instance, RwInt32 offset,
 {
     RWFUNCTION(RWSTRING("_rwTextureOpen"));
 
-#if defined(RWEVALUATION)
+#if defined(_DEBUG) ||defined(RWEVALUATION)
     _rwCameraValOpen();
 #endif /* defined(RWEVALUATION) */
 

@@ -76,12 +76,6 @@ typedef struct RwGlobals RwGlobals;
 #if (!defined(DOXYGEN))
 struct RwGlobals
 {
-#ifdef RWDEBUG
-        RwDebugHandler      debugFunction;          /* debug string handler */
-        RwInt32             debugStackDepth;        /* current depth of function stack */
-        RwBool              debugTrace;             /* is function tracing enabled */
-#endif
-
         /* Current entities */
         void                *curCamera;             /* Current camera */
         void                *curWorld;              /* Current World */
@@ -105,9 +99,6 @@ struct RwGlobals
 
         /* The memory allocation functions */
         RwMemoryFunctions   memoryFuncs;
-#ifdef RWDEBUG
-        RwBool              freeListExtraDebug;
-#endif /* RWDEBUG */
 
         /* virtual memory alloc/free functions */
         RwMemoryAllocFn         memoryAlloc;
@@ -120,6 +111,15 @@ struct RwGlobals
 
         /* Resource arena init size. */
         RwUInt32            resArenaInitSize;
+
+        /* Debug variables. Have to be last. */
+#ifdef RWDEBUG
+        RwDebugHandler      debugFunction;          /* debug string handler */
+        RwInt32             debugStackDepth;        /* current depth of function stack */
+        RwBool              debugTrace;             /* is function tracing enabled */
+
+        RwBool              freeListExtraDebug;
+#endif
 };
 
 typedef struct RwModuleInfo RwModuleInfo;
