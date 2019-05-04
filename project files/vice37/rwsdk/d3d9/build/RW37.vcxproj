@@ -38,32 +38,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{96CC0925-B7EB-4FB6-8596-933F1C7ED87E}</ProjectGuid>
     <RootNamespace>RW37</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -127,26 +127,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\obj\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DIRECTX9_SDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DIRECTX9_SDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|Win32'">
     <OutDir>$(ProjectDir)..\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\obj\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DIRECTX9_SDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DIRECTX9_SDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\obj\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DIRECTX9_SDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DIRECTX9_SDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|Win32'">
     <OutDir>$(ProjectDir)..\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\obj\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(DXSDK_DIR)\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DIRECTX9_SDK_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DIRECTX9_SDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(ProjectDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
@@ -180,7 +180,7 @@
       <CompileAs>CompileAsC</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>../include/collis/;../include/driver/common/;../include/driver/d3d9/;../include/os/win/;../include/src/;../include/src/plcore/;../include/src/pipe/p2/;../include/src/pipe/p2/d3d9/;../include/world/;../include/world/pipe/p2/;../include/world/pipe/p2/d3d9/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_RW_CORE;RWDEBUG;RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_RW_CORE;_CRT_SECURE_NO_WARNINGS;RWDEBUG;RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Lib>
@@ -195,7 +195,7 @@
       <CompileAs>CompileAsC</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>../include/collis/;../include/driver/common/;../include/driver/d3d9/;../include/os/win/;../include/src/;../include/src/plcore/;../include/src/pipe/p2/;../include/src/pipe/p2/d3d9/;../include/world/;../include/world/pipe/p2/;../include/world/pipe/p2/d3d9/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_RW_CORE;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_RW_CORE;_CRT_SECURE_NO_WARNINGS;RWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Lib>
@@ -250,7 +250,7 @@
       <CompileAs>CompileAsC</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>../include/collis/;../include/driver/common/;../include/driver/d3d9/;../include/os/win/;../include/src/;../include/src/plcore/;../include/src/pipe/p2/;../include/src/pipe/p2/d3d9/;../include/world/;../include/world/pipe/p2/;../include/world/pipe/p2/d3d9/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_RW_CORE;RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_RW_CORE;_CRT_SECURE_NO_WARNINGS;RW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -271,7 +271,7 @@
       <CompileAs>CompileAsC</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>../include/collis/;../include/driver/common/;../include/driver/d3d9/;../include/os/win/;../include/src/;../include/src/plcore/;../include/src/pipe/p2/;../include/src/pipe/p2/d3d9/;../include/world/;../include/world/pipe/p2/;../include/world/pipe/p2/d3d9/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_RW_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_RW_CORE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>

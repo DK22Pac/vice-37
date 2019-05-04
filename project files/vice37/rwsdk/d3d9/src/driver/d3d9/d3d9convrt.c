@@ -2209,9 +2209,9 @@ D3D9RasterPalletizedSetFromImage(RwRaster *raster, RwImage *image)
 
                 if ( (rasFormat & rwRASTERFORMATPIXELFORMATMASK) == rwRASTERFORMAT888 )
                 {
-                    raster->cFormat &= (~rwRASTERFORMAT8888)>>8;
+                    raster->cFormat &= (~((RwUInt32)rwRASTERFORMAT8888))>>8;
 
-                    raster->cFormat |= (rwRASTERFORMAT888 >> 8);
+                    raster->cFormat |= (((RwUInt32)rwRASTERFORMAT888) >> 8);
 
                     rasExt->alpha = 0;
                 }

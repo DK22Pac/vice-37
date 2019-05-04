@@ -55,8 +55,8 @@
 #define CONV8888TORGBA(rgba, pixel)                     \
 MACRO_START                                             \
 {                                                       \
-    (rgba)->alpha = (RwUInt8)(pixel >> 16);             \
-    (rgba)->red   = (RwUInt8)(pixel >> 8);              \
+    (rgba)->alpha = (RwUInt8)(pixel >> 24);             \
+    (rgba)->red   = (RwUInt8)(pixel >> 16);             \
     (rgba)->green = (RwUInt8)(pixel >> 8);              \
     (rgba)->blue  = (RwUInt8)(pixel);                   \
 }                                                       \
@@ -67,7 +67,7 @@ MACRO_STOP                                              \
 MACRO_START                                             \
 {                                                       \
     (rgba)->alpha = (RwUInt8)255;                       \
-    (rgba)->red   = (RwUInt8)(pixel >> 8);              \
+    (rgba)->red   = (RwUInt8)(pixel >> 16);             \
     (rgba)->green = (RwUInt8)(pixel >> 8);              \
     (rgba)->blue  = (RwUInt8)(pixel);                   \
 }                                                       \

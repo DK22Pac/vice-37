@@ -1,66 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Файлы исходного кода">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Заголовочные файлы">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Заголовочные файлы\Modules">
-      <UniqueIdentifier>{4087bc53-2bd7-4a87-92ab-263953ff1247}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="TextureLoadHook.h" />
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="HAnimHook.h" />
+    <ClInclude Include="IndexBufferHook.h" />
+    <ClInclude Include="MatFXHook.h" />
+    <ClInclude Include="MemoryManagement.h" />
+    <ClInclude Include="RwEngineInstanceHook.h" />
+    <ClInclude Include="RwEngineVideoMode.h" />
+    <ClInclude Include="RwFunctionsHook.h" />
+    <ClInclude Include="RwFunctionsList.h" />
+    <ClInclude Include="SelectDevice.h" />
+    <ClInclude Include="FilePath.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DllMain.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="RwFunctionsList.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="RwFunctionsHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="AdapterRefreshRate.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="FileSystem.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="RwEngineInstanceHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="MemoryManagement.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="IndexBufferHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureLoadHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Debug.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="RwEngineVideoMode.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="MatFXHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="HAnimHook.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalMap.h">
-      <Filter>Заголовочные файлы\Modules</Filter>
-    </ClInclude>
+    <ClCompile Include="DllMain.cpp" />
   </ItemGroup>
 </Project>

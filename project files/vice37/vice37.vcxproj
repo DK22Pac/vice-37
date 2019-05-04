@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -60,6 +60,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rw37.lib;rtquat.lib;rpanisot.lib;rtanim.lib;rphanim.lib;rpskin.lib;rpmatfx.lib;rtbmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,24 +78,25 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>rw37.lib;rtquat.lib;rpanisot.lib;rtanim.lib;rphanim.lib;rpskin.lib;rpmatfx.lib;rtbmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdapterRefreshRate.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="FileSystem.h" />
     <ClInclude Include="HAnimHook.h" />
     <ClInclude Include="MatFXHook.h" />
     <ClInclude Include="IndexBufferHook.h" />
     <ClInclude Include="MemoryManagement.h" />
-    <ClInclude Include="NormalMap.h" />
     <ClInclude Include="RwEngineInstanceHook.h" />
     <ClInclude Include="RwEngineVideoMode.h" />
     <ClInclude Include="RwFunctionsList.h" />
     <ClInclude Include="RwFunctionsHook.h" />
+    <ClInclude Include="SelectDevice.h" />
+    <ClInclude Include="FilePath.h" />
     <ClInclude Include="TextureLoadHook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

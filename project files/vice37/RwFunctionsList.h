@@ -1,5 +1,4 @@
 #pragma once
-
 #include <src/rwcore.h>
 #include <extplugin/rphanim.h>
 #include <extplugin/rpmatfx.h>

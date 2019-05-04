@@ -80,7 +80,7 @@ static inline unsigned int _CPUGetExtFeatureCount( void )
 
     __cpuid( (int*)cpu_features, 0x80000000 );
 
-    return ( cpu_features[4] - 0x80000000 );
+    return ( cpu_features[3] - 0x80000000 );
 }
 #endif
 

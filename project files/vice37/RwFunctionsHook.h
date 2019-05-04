@@ -1,6 +1,5 @@
 #pragma once
 #include "CPatch.h"
-
 #include "RwFunctionsList.h"
 
 extern "C" void _rwD3D9FindCorrectRasterFormat();
@@ -11,61 +10,53 @@ extern "C" void _rwD3D9CheckValidCameraTextureFormat();
 #undef RwIm2DGetNearScreenZ
 #endif
 
-RwReal RwIm2DGetNearScreenZ(void)
-{
-	return (RWSRCGLOBAL(dOpenDevice).zBufferNear);
+RwReal RwIm2DGetNearScreenZ(void) {
+    return (RWSRCGLOBAL(dOpenDevice).zBufferNear);
 }
 
 #ifdef RwIm2DGetFarScreenZ
 #undef RwIm2DGetFarScreenZ
 #endif
-RwReal RwIm2DGetFarScreenZ(void)
-{
-	return (RWSRCGLOBAL(dOpenDevice).zBufferFar);
+RwReal RwIm2DGetFarScreenZ(void) {
+    return (RWSRCGLOBAL(dOpenDevice).zBufferFar);
 }
 
 #ifdef RwRenderStateGet
 #undef RwRenderStateGet
 #endif
-RwBool RwRenderStateGet(RwRenderState state, void *value)
-{
-	return (RWSRCGLOBAL(dOpenDevice).fpRenderStateGet(state, value));
+RwBool RwRenderStateGet(RwRenderState state, void *value) {
+    return (RWSRCGLOBAL(dOpenDevice).fpRenderStateGet(state, value));
 }
 
 #ifdef RwRenderStateSet
 #undef RwRenderStateSet
 #endif
-RwBool RwRenderStateSet(RwRenderState state, void *value)
-{
-	return (RWSRCGLOBAL(dOpenDevice).fpRenderStateSet(state, value));
+RwBool RwRenderStateSet(RwRenderState state, void *value) {
+    return (RWSRCGLOBAL(dOpenDevice).fpRenderStateSet(state, value));
 }
 
 #ifdef RwIm2DRenderLine
 #undef RwIm2DRenderLine
 #endif
-RwBool RwIm2DRenderLine(RwIm2DVertex *vertices, RwInt32 numVertices, RwInt32 vert1, RwInt32 vert2)
-{
-	return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderLine(vertices, numVertices, vert1, vert2));
+RwBool RwIm2DRenderLine(RwIm2DVertex *vertices, RwInt32 numVertices, RwInt32 vert1, RwInt32 vert2) {
+    return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderLine(vertices, numVertices, vert1, vert2));
 }
 
 #ifdef RwIm2DRenderPrimitive
 #undef RwIm2DRenderPrimitive
 #endif
-RwBool RwIm2DRenderPrimitive(RwPrimitiveType primType, RwIm2DVertex *vertices, RwInt32 numVertices)
-{
-	return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderPrimitive(primType, vertices, numVertices));
+RwBool RwIm2DRenderPrimitive(RwPrimitiveType primType, RwIm2DVertex *vertices, RwInt32 numVertices) {
+    return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderPrimitive(primType, vertices, numVertices));
 }
 
 #ifdef RwIm2DRenderIndexedPrimitive
 #undef RwIm2DRenderIndexedPrimitive
 #endif
-RwBool RwIm2DRenderIndexedPrimitive(RwPrimitiveType primType, RwIm2DVertex *vertices, RwInt32 numVertices, RwImVertexIndex *indices, RwInt32 numIndices)
-{
-	return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderIndexedPrimitive(primType, vertices, numVertices, indices, numIndices));
+RwBool RwIm2DRenderIndexedPrimitive(RwPrimitiveType primType, RwIm2DVertex *vertices, RwInt32 numVertices, RwImVertexIndex *indices, RwInt32 numIndices) {
+    return (RWSRCGLOBAL(dOpenDevice).fpIm2DRenderIndexedPrimitive(primType, vertices, numVertices, indices, numIndices));
 }
 
-void MakeRwFunctionsHook()
-{
+void MakeRwFunctionsHook() {
 //	CPatch::RedirectJump(0x63BFF0, _rwD3D9RasterSubRaster                                      );
 //	CPatch::RedirectJump(0x63C020, _rwD3D9TextureSetRaster                                     );
 //	CPatch::RedirectJump(0x63C030, _rwD3D9RasterGetMipLevels                                   );
@@ -197,7 +188,7 @@ void MakeRwFunctionsHook()
 	CPatch::RedirectJump(0x642B40, RwEngineGetNumVideoModes                                    );
 //	CPatch::RedirectJump(0x642B70, RwEngineGetVideoModeInfo                                    ); // replaced with RwEngineVideoMode
 	CPatch::RedirectJump(0x642BA0, RwEngineGetCurrentVideoMode                                 );
-//	CPatch::RedirectJump(0x642BD0, RwEngineSetVideoMode                                        ); // moved to RwEngineVideoMode
+	CPatch::RedirectJump(0x642BD0, RwEngineSetVideoMode                                        );
 	CPatch::RedirectJump(0x642C00, RwEngineStop                                                );
 	CPatch::RedirectJump(0x642C50, RwEngineStart                                               );
 	CPatch::RedirectJump(0x642CE0, RwEngineClose                                               );

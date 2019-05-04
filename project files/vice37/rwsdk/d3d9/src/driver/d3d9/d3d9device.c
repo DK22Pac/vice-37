@@ -2952,10 +2952,10 @@ _rwD3D9CameraClear(void *camera, void *color, RwInt32 clearFlags)
                     rect.right = rect.left + _RwD3D9AdapterInformation.mode.Width;
                     rect.bottom = rect.top + _RwD3D9AdapterInformation.mode.Height;
 
-                    if (GetWindowLong(WindowHandle, GWL_STYLE) & WS_MAXIMIZE)
-                    {
-                        SetWindowLong(WindowHandle, GWL_STYLE, GetWindowLong(WindowHandle, GWL_STYLE) & ~WS_MAXIMIZE);
-                    }
+                    //if (GetWindowLong(WindowHandle, GWL_STYLE) & WS_MAXIMIZE)
+                    //{
+                    //    SetWindowLong(WindowHandle, GWL_STYLE, GetWindowLong(WindowHandle, GWL_STYLE) & ~WS_MAXIMIZE);
+                    //}
 
                     AdjustWindowRectEx(&rect,
                                     GetWindowLong(WindowHandle, GWL_STYLE),
@@ -4199,10 +4199,10 @@ _rwD3D9CameraBeginUpdate(void *out __RWUNUSED__,
                     rect.right = rect.left + _RwD3D9AdapterInformation.mode.Width;
                     rect.bottom = rect.top + _RwD3D9AdapterInformation.mode.Height;
 
-                    if (GetWindowLong(WindowHandle, GWL_STYLE) & WS_MAXIMIZE)
-                    {
-                        SetWindowLong(WindowHandle, GWL_STYLE, GetWindowLong(WindowHandle, GWL_STYLE) & ~WS_MAXIMIZE);
-                    }
+                    //if (GetWindowLong(WindowHandle, GWL_STYLE) & WS_MAXIMIZE)
+                    //{
+                    //    SetWindowLong(WindowHandle, GWL_STYLE, GetWindowLong(WindowHandle, GWL_STYLE) & ~WS_MAXIMIZE);
+                    //}
 
                     AdjustWindowRectEx(&rect,
                                     GetWindowLong(WindowHandle, GWL_STYLE),

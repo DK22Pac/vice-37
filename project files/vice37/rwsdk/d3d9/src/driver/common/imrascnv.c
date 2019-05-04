@@ -508,7 +508,7 @@ _rwImageSetFromRaster4444(RwImage *image, RwUInt8 *rasPixels, RwInt32 rasStride)
         {
             RwUInt16 pixel = (*npIn);
 
-            CONV8888TORGBA(rpOut, pixel);
+            CONV4444TORGBA(rpOut, pixel);
 
             rpOut++;
             npIn++;
